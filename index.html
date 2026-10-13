@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stopwatch & Timer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <button class="tab active" data-page="stopwatch">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M12 8v4l2.5 2.5M9 2h6M12 5a8 8 0 1 0 8 8"/>
+
+            </svg>
+
+
+
+        </button>
+
+
+        <button class="tab" data-page="timer">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="28"
+                 height="28"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M10 2h4M12 14v-4m0 10a8 8 0 1 0 0-16"/>
+
+            </svg>
+
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- Content -->
+
+    <main class="content">
+
+        <!-- Stopwatch -->
+
+        <section id="stopwatch" class="page active">
+
+            <div class="card">
+
+                <h2>Stopwatch</h2>
+
+                <div class="display">
+
+                    <span id="sw-hour">00</span>
+
+                    <span>:</span>
+
+                    <span id="sw-minute">00</span>
+
+                    <span>:</span>
+
+                    <span id="sw-second">00</span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button id="sw-reset" class="btn reset">
+                        Reset
+                    </button>
+
+                    <button id="sw-start" class="btn start">
+                        Start
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Timer -->
+
+        <section id="timer" class="page">
+
+            <div class="card">
+
+                <h2>Timer</h2>
+
+                <div class="timer-inputs">
+
+                    <input
+                            type="number"
+                            id="t-hour"
+                            min="0"
+                            max="99"
+                            placeholder="HH">
+
+                    <span>:</span>
+
+                    <input
+                            type="number"
+                            id="t-minute"
+                            min="0"
+                            max="59"
+                            placeholder="MM">
+
+                    <span>:</span>
+
+                    <input
+                            type="number"
+                            id="t-second"
+                            min="0"
+                            max="59"
+                            placeholder="SS">
+
+                </div>
+
+
+                <div class="display">
+
+                    <span id="timer-display">
+                        00:00:00
+                    </span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <button id="timer-reset" class="btn reset">
+                        Reset
+                    </button>
+
+                    <button id="timer-start" class="btn start">
+                        Start
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
